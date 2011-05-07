@@ -10,6 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110507011123) do
+
+  create_table "marketing_contacts", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "company"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "website"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.datetime "last_contact"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
