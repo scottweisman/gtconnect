@@ -1,0 +1,9 @@
+<%= form_for(@marketing_contact) do |f| %>
+<div class="field">
+  <%= f.label :notes %><br />
+  <%= f.text_area :notes %>
+</div>
+<div class="actions">
+  <%= f.submit "Save note" %>
+</div>
+<% end %>

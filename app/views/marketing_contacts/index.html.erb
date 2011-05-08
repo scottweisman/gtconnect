@@ -1,49 +1,24 @@
-<h1>Listing marketing_contacts</h1>
-
+<h1>All Contacts</h1>
+<%= link_to 'New contact', new_marketing_contact_path %>
+<br />
+<br />
 <table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Company</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Street address</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip</th>
-    <th>Website</th>
-    <th>Facebook</th>
-    <th>Twitter</th>
-    <th>Last contact</th>
-    <th>Notes</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @marketing_contacts.each do |marketing_contact| %>
   <tr>
-    <td><%= marketing_contact.first_name %></td>
-    <td><%= marketing_contact.last_name %></td>
-    <td><%= marketing_contact.company %></td>
-    <td><%= marketing_contact.email %></td>
-    <td><%= marketing_contact.phone %></td>
-    <td><%= marketing_contact.street_address %></td>
-    <td><%= marketing_contact.city %></td>
-    <td><%= marketing_contact.state %></td>
-    <td><%= marketing_contact.zip %></td>
-    <td><%= marketing_contact.website %></td>
-    <td><%= marketing_contact.facebook %></td>
-    <td><%= marketing_contact.twitter %></td>
-    <td><%= marketing_contact.last_contact %></td>
-    <td><%= marketing_contact.notes %></td>
-    <td><%= link_to 'Show', marketing_contact %></td>
-    <td><%= link_to 'Edit', edit_marketing_contact_path(marketing_contact) %></td>
-    <td><%= link_to 'Destroy', marketing_contact, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <td class="person">
+    <div class="person_name">
+      <%= link_to "#{marketing_contact.first_name} #{marketing_contact.last_name}", marketing_contact %>
+    </div>
+    <div class="person_company">
+    <%= marketing_contact.company %>
+    </div>
+    <div class="person_contact">
+    <%= mail_to "#{marketing_contact.email}" %> |
+    <%= marketing_contact.phone %>
+    </div>
+    
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Marketing contact', new_marketing_contact_path %>

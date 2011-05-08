@@ -1,0 +1,36 @@
+html, body{
+height: 100%;
+}
+body{
+	background: #E2EEF3;
+	font-size: 14px;
+}
+.container{
+	width: 950px;
+	margin: 0 auto;
+}
+#main .container{
+	background: white;
+	border: 1px solid #ACC9D8;
+	width: 950px;
+	margin: 0 auto;
+	padding: 10px;
+}
+.new tbody tr:nth-child(2n) td, .new tbody tr.even td{
+	background: none;
+}
+input[type=text], input[type=password], input.text, input.title, textarea{
+	font-size: 14px;
+}
+#label_state{
+	padding-left: 110px;
+}
+#label_zip{
+	padding-left: 10px;
+}
+.address th {
+	vertical-align: top;
+}
+textarea{
+	height: 125px;
+}

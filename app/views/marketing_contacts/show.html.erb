@@ -1,75 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>First name:</b>
+<div class="contact_name span-12">
+<h1>
   <%= @marketing_contact.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
   <%= @marketing_contact.last_name %>
-</p>
-
-<p>
-  <b>Company:</b>
+</h1>
   <%= @marketing_contact.company %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @marketing_contact.email %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @marketing_contact.phone %>
-</p>
-
-<p>
-  <b>Street address:</b>
-  <%= @marketing_contact.street_address %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @marketing_contact.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @marketing_contact.state %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%= @marketing_contact.zip %>
-</p>
-
-<p>
+</div>
+<div class="contact_info span-12 last">
+  
+  <span class="important_info">
+  <%= @marketing_contact.phone %><br />
+  <%= mail_to "#{@marketing_contact.email}" %><br />
+  </span>
+  
   <b>Website:</b>
-  <%= @marketing_contact.website %>
-</p>
-
-<p>
+  <%= link_to @marketing_contact.website, url_with_protocol(@marketing_contact.website) %><br />
+  
   <b>Facebook:</b>
-  <%= @marketing_contact.facebook %>
-</p>
-
-<p>
+  <%= link_to @marketing_contact.facebook, facebook_with_protocol(@marketing_contact.facebook) %><br />
+  
   <b>Twitter:</b>
-  <%= @marketing_contact.twitter %>
-</p>
+  <%= link_to @marketing_contact.twitter, twitter_with_protocol(@marketing_contact.twitter) %>
+  
+  </div>
+  
+<div class="contact_address">
+  <%= @marketing_contact.street_address %>
+  <%= @marketing_contact.city %>
+  <%= @marketing_contact.state %>
+  <%= @marketing_contact.zip %>
+</div>
 
-<p>
+
+<div class="last_contact">
   <b>Last contact:</b>
-  <%= @marketing_contact.last_contact %>
-</p>
+  <%= @marketing_contact.last_contact.strftime("%B %e, %Y") %>
+<br />
+<br />
+  <%= render 'note_form' %>
+</div>
 
-<p>
-  <b>Notes:</b>
-  <%= @marketing_contact.notes %>
-</p>
-
-
+<br />
+<br />
 <%= link_to 'Edit', edit_marketing_contact_path(@marketing_contact) %> |
 <%= link_to 'Back', marketing_contacts_path %>

@@ -11,63 +11,70 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
+<table class="add_contact">
+  <tbody>
+    <tr class="field first_name">
+      <th><%= f.label :first_name %></th>
+      <td><%= f.text_field :first_name %></td>
+    </tr>
+    <tr class="field last_name">
+      <th><%= f.label :last_name %></th>
+      <td><%= f.text_field :last_name %></td>
+    </tr>
+    <tr class="field company">
+      <th><%= f.label :company %></th>
+      <td><%= f.text_field :company %></td>
+    </tr>
+    <tr class="field contact">
+      <th><%= f.label :email %></th>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr class="field contact">
+      <th><%= f.label :phone %></th>
+      <td><%= f.text_field :phone %></td>
+    </tr>
+    <tr class="field contact">
+      <th><%= f.label :website %></th>
+      <td><%= f.text_field :website %></td>
+    </tr>
+    
+    <tr class="field contact">
+      <th><%= f.label :facebook %></th>
+      <td><%= f.text_field :facebook %></td>
+    </tr>
+    <tr class="field contact">
+      <th><%= f.label :twitter %></th>
+      <td><%= f.text_field :twitter %></td>
+    </tr>
+    
+  <div id="address_fields">
+    <tr class="field address">
+      <th>Address</th>
+      <td>
+        <%= f.label :street %><br />
+        <%= f.text_field :street_address %></br>
+        <span id="label_city"><%= f.label :city %></span>
+        <span id="label_state"><%= f.label :state %></span>
+        <span id="label_zip"><%= f.label :zip %></span><br />
+        <%= f.text_field :city, :size => 13 %>
+        <%= f.text_field :state, :size => 2 %>
+        <%= f.text_field :zip, :size => 9 %>
+      </td>
+    </tr>
   </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :company %><br />
-    <%= f.text_field :company %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :street_address %><br />
-    <%= f.text_field :street_address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
-  </div>
-  <div class="field">
-    <%= f.label :facebook %><br />
-    <%= f.text_field :facebook %>
-  </div>
-  <div class="field">
-    <%= f.label :twitter %><br />
-    <%= f.text_field :twitter %>
-  </div>
-  <div class="field">
-    <%= f.label :last_contact %><br />
-    <%= f.datetime_select :last_contact %>
-  </div>
+  
+    <tr class="field last_contact">
+      <th><%= f.label :last_contact %></th>
+      <td><%= f.text_field :last_contact %></td>
+    </tr>
+</tbody>
+</table>
   <div class="field">
     <%= f.label :notes %><br />
     <%= f.text_area :notes %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add contact" %>
+    or <%= link_to 'Cancel', marketing_contacts_path %>
   </div>
 <% end %>
