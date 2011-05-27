@@ -1,5 +1,7 @@
 Gtconnect::Application.routes.draw do
   resources :marketing_contacts
+  root :to => 'marketing_contacts#index'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

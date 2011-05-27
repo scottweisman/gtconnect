@@ -30,14 +30,10 @@
   <%= @marketing_contact.zip %>
 </div>
 
-
-<div class="last_contact">
-  <b>Last contact:</b>
-  <%= @marketing_contact.last_contact.strftime("%B %e, %Y") %>
+<%= render 'last_contact_form' %>
 <br />
 <br />
-  <%= render 'note_form' %>
-</div>
+<%= render 'note_form' %>
 
 <br />
 <br />

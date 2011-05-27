@@ -15,6 +15,7 @@ body{
 	width: 950px;
 	margin: 0 auto;
 	padding: 10px;
+	margin-top: 40px;
 }
 .new tbody tr:nth-child(2n) td, .new tbody tr.even td{
 	background: none;
