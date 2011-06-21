@@ -1,23 +1,10 @@
-<h1 class="span-9">All Contacts</h1>
-<br />
-<br />
-<table>
+<h1>All Contacts</h1>
+<div class="person_names span-7 clear">
+<ul>
 <% @marketing_contacts.each do |marketing_contact| %>
-  <tr>
-    <td class="person">
-    <div class="person_name">
-      <%= link_to "#{marketing_contact.first_name} #{marketing_contact.last_name}", marketing_contact %>
-    </div>
-    <div class="person_company">
-    <%= marketing_contact.company %>
-    </div>
-    <div class="person_contact">
-    <%= mail_to "#{marketing_contact.email}" %> |
-    <%= marketing_contact.phone %>
-    </div>
-    
+  <li>
+    <%= link_to "#{marketing_contact.first_name} #{marketing_contact.last_name}", marketing_contact %>
+  </li>
 <% end %>
-</table>
-
-<br />
+</ul>
 

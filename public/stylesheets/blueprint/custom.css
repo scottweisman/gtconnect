@@ -2,21 +2,39 @@ html, body{
 height: 100%;
 }
 body{
-	background: #E2EEF3;
-	font-size: 14px;
+	background: white;
+	font-size: 16px;
 }
 .container{
 	width: 950px;
 	margin: 0 auto;
 }
+#header{
+	padding: 30px 0;
+}
+#header .title a{
+	margin-right: 50px;
+}
 #main .container{
 	background: white;
-	border: 1px solid #ACC9D8;
 	width: 950px;
 	margin: 0 auto;
-	padding: 10px;
-	margin-top: 40px;
 }
+.person_names ul{
+	list-style-type: none;
+	padding: none;
+	margin: 0;
+	padding: 0;
+}
+.person_names li{
+	padding: 5px 0 5px;
+	border-bottom: 1px solid #999;
+}
+.person_names li a{
+	text-decoration: none;
+}
+
+
 .new tbody tr:nth-child(2n) td, .new tbody tr.even td{
 	background: none;
 }

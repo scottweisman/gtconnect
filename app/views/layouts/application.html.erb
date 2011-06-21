@@ -10,13 +10,12 @@
 <body class="<%= controller_name -%> <%= action_name -%>">    
   <div id="header">
     <div class="container">
-      <div class="title span-10">
+      <div class="title">
         <%= link_to 'GT > Connect', root_path %>
-      </div>
-      <div class="navigation right">
         <%= button_link_to 'New contact', new_marketing_contact_path, :class => 'big' %>
       </div>
     </div>
+  </div>
   <div id="main">
     <div class="container">
       <div class="main_content span-24 last">
