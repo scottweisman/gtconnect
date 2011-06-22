@@ -1,10 +1,17 @@
 <h1>All Contacts</h1>
 <div class="person_names span-7 clear">
-<ul>
 <% @marketing_contacts.each do |marketing_contact| %>
-  <li>
-    <%= link_to "#{marketing_contact.first_name} #{marketing_contact.last_name}", marketing_contact %>
-  </li>
+  <div class="contact_info">
+  <h2 class="contact_link">
+    <a href="#"><%= marketing_contact.first_name %> <%= marketing_contact.last_name %><span class="arrow right">&#8595;</span></a>
+    </h2>
+      <div class="hidden_info">
+        <%= marketing_contact.company %><br />
+        <%= marketing_contact.phone %><br />
+        <%= mail_to "#{marketing_contact.email}" %><br />
+      </div>
+    </div>
 <% end %>
-</ul>
+</div>
 
+<%#=# link_to "#{marketing_contact.first_name} #{marketing_contact.last_name}", marketing_contact, :id => 'contact_link' %>

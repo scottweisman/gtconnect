@@ -1,11 +1,12 @@
-<div class="contact_name span-12">
+<div class="span-12">
+  <div class="contact_name">
 <h1>
   <%= @marketing_contact.first_name %>
   <%= @marketing_contact.last_name %>
 </h1>
   <%= @marketing_contact.company %>
-</div>
-<div class="contact_info span-12 last">
+  </div>
+<div class="contact_info">
   
   <span class="important_info">
   <%= @marketing_contact.phone %><br />
@@ -39,3 +40,4 @@
 <br />
 <%= link_to 'Edit', edit_marketing_contact_path(@marketing_contact) %> |
 <%= link_to 'Back', marketing_contacts_path %>
+</div>

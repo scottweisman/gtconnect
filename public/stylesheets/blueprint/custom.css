@@ -4,6 +4,7 @@ height: 100%;
 body{
 	background: white;
 	font-size: 16px;
+	margin-left: 10px;
 }
 .container{
 	width: 950px;
@@ -20,20 +21,25 @@ body{
 	width: 950px;
 	margin: 0 auto;
 }
-.person_names ul{
-	list-style-type: none;
-	padding: none;
-	margin: 0;
-	padding: 0;
-}
-.person_names li{
-	padding: 5px 0 5px;
+
+.contact_info{
 	border-bottom: 1px solid #999;
 }
-.person_names li a{
+.contact_info h2{
+	margin-bottom: 0px;
+	font-size: 16px;
+	padding: 10px 0;
+}
+h2.contact_link a{
+	text-decoration: none;
+	font-size: 16px;
+}
+#arrow a{
+	float: right;
+}
+.hidden_info a{
 	text-decoration: none;
 }
-
 
 .new tbody tr:nth-child(2n) td, .new tbody tr.even td{
 	background: none;
