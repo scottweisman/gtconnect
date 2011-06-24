@@ -24,6 +24,7 @@ body{
 
 .contact_info{
 	border-bottom: 1px solid #999;
+	cursor: pointer;
 }
 .contact_info h2{
 	margin-bottom: 0px;
@@ -41,21 +42,38 @@ h2.contact_link a{
 	text-decoration: none;
 }
 
-.new tbody tr:nth-child(2n) td, .new tbody tr.even td{
-	background: none;
+.simple_form label {  
+  float: left;  
+  width: 100px;  
+  text-align: right;  
+  margin: 2px 10px 2px -10px;  
+}  
+  
+.simple_form div.input {  
+  margin-bottom: 10px;  
+}  
+  
+.simple_form div.boolean, .simple_form input[type='submit'] {  
+  margin-left: 120px;  
+}  
+  
+.simple_form div.boolean label {  
+  float: none;  
+  margin: 0;  
 }
-input[type=text], input[type=password], input.text, input.title, textarea{
-	font-size: 14px;
+
+.simple_form p {
+	margin-bottom: 10px;
+	cursor: pointer;
+	margin-left: 100px;
+	color: #999;
 }
-#label_state{
-	padding-left: 110px;
+
+.input {
+	width: 300px;
 }
-#label_zip{
-	padding-left: 10px;
-}
-.address th {
-	vertical-align: top;
-}
-textarea{
-	height: 125px;
+
+.close {
+	display: inline;
+	float: left;
 }

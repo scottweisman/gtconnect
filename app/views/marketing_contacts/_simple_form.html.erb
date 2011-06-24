@@ -1,0 +1,29 @@
+<%= simple_form_for(@marketing_contact) do |f| %>
+  <%= f.input :first_name, :required => false %>
+  <%= f.input :last_name, :required => false %>
+  <%= f.input :company %>
+  <%= f.input :email %>
+  <%= f.input :phone %>
+  <p class="website_opt_text">Add a website</p>
+  <div class="website_opt_input">
+  <%= f.input :website %>
+  </div>
+  <p class="facebook_opt_text">Add a facebook account</p>
+  <div class="facebook_opt_input">
+  <%= f.input :facebook %>
+  </div>
+  <p class="twitter_opt_text">Add a twitter account</p>
+  <div class="twitter_opt_input">
+  <%= f.input :twitter %>
+  </div>
+  <p class="address_opt_text">Add an address</p>
+  <div class="address_opt_input">
+  <%= f.input :street_address, :label => 'Street' %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  </div>
+  <%= f.input :last_contact, :as => :string %>
+  <%= f.input :notes, :as => :text %>
+  <%= f.button :submit, :label => 'Create contact' %>
+<% end %>

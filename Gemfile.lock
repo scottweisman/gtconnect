@@ -64,6 +64,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    simple_form (1.4.1)
     sqlite3-ruby (1.2.5)
     thor (0.14.6)
     treetop (1.4.9)
@@ -77,4 +78,5 @@ DEPENDENCIES
   css3buttons
   jquery-rails
   rails (= 3.0.4)
+  simple_form
   sqlite3-ruby (= 1.2.5)
